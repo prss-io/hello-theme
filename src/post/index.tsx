@@ -24,25 +24,25 @@ const Post = data => {
   return (
     <Page className="page-post">
       <Header />
-      <main className="pb-6 col">
+      <main className="py-12 col">
         <section className="flex justify-center">
-          <div className="relative mx-auto flex max-w-screen-xl flex-col gap-2 mt-6 w-full">
+          <div className="relative mx-auto flex max-w-screen-xl flex-col gap-2 w-full">
 
             {/* Header - Full Width */}
-            <header className="flex flex-col gap-5 py-6">
+            <header className="flex flex-col gap-5">
               <h1 className="text-3xl md:text-4xl font-bold lg:text-5xl post__title mb-0" style={{ marginBottom: 0 }}>{postTitle}</h1>
               {createdAt && (
-                <div className="mb-2 flex items-center space-x-2 md:mb-4 text-sm">
+                <div className="mb-2 flex items-center space-x-2 md:mb-2">
                   {PRSS.formattedDate(createdAt)}
                 </div>
               )}
 
               {featuredImageUrl && (
-              <div className="mb-8 relative max-h-[600px]">
+              <div className="mb-8 relative max-h-[500px]">
                 <img 
                   src={featuredImageUrl} 
                   alt={featuredImageAlt || postTitle} 
-                  className="w-full h-full object-cover max-h-[600px]"
+                  className="w-full h-full object-cover max-h-[500px]"
                 />
                 {featuredImageAuthor && featuredImageAuthorLink && (
                   <div className="text-xs justify-end flex mt-1">
@@ -66,7 +66,7 @@ const Post = data => {
             
             {/* Post Content - Full Width */}
             <div className="w-full">
-                <div className="post-content prose dark:prose-invert max-w-none pb-12 border-b">
+                <div className="post-content prose dark:prose-invert max-w-none pb-12">
                   <div
                     className="post-inner-content page__content"
                     dangerouslySetInnerHTML={{
@@ -76,7 +76,7 @@ const Post = data => {
                 </div>
 
               {/* Blog link with arrow */}
-              <div className="mt-8 flex justify-end">
+              <div className="mt-1 flex justify-end">
                 <a 
                   href={`${rootPath}blog`} 
                   className="group inline-flex items-center gap-2 text-primary font-medium hover:underline"

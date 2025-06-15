@@ -42,7 +42,7 @@ const Docs = data => {
         <a 
           href={post?.url}
           className={cx(
-            "block py-2 px-3 rounded-md transition-colors text-sm",
+            "block py-2 px-3 rounded-md transition-colors",
             isActive 
               ? "bg-primary/10 text-primary font-medium border-primary pl-4" 
               : "hover:bg-muted"
@@ -62,7 +62,7 @@ const Docs = data => {
                   <a 
                     href={childPost?.url}
                     className={cx(
-                      "block py-1.5 px-3 rounded-md transition-colors text-sm",
+                      "block py-1.5 px-3 rounded-md transition-colors",
                       isChildActive 
                         ? "bg-primary/10 text-primary font-medium border-primary pl-4" 
                         : "hover:bg-muted text-muted-foreground"
@@ -110,8 +110,8 @@ const Docs = data => {
   return (
     <Page className="page-docs">
       <Header />
-      <main className="pb-6 col">
-        <section className="flex justify-center mx-auto flex max-w-screen-xl flex-col gap-20 lg:flex-row mt-6">
+      <main className="py-12 col">
+        <section className="flex justify-center mx-auto flex max-w-screen-xl flex-col gap-20 lg:flex-row">
           <div className="relative mx-auto flex max-w-screen-xl w-full flex-col">
             {/* Title Section */}
             <div className="">

@@ -227,7 +227,47 @@ table {
 }
 
 h1,h2,h3,h4,h5,h6,ul,ol,dl,blockquote,p,address,hr,table,fieldset,figure,pre {
-  margin-bottom: 32px;
+  margin-bottom: 35px;
+}
+
+.page-blog h3 {
+  margin-bottom: 5px;
+}
+
+.page-blog .articles-grid p {
+  margin-bottom: 10px;
+}
+
+.page-blog .article-card {
+  padding-left: 20px;
+  position: relative;
+}
+
+.page-blog .article-card .grid {
+  padding-left: 20px;
+}
+
+.page-blog .article-card .grid h3 {
+  position: relative;
+}
+
+.page-blog .article-card .grid h3::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  left: -26px;
+  top: 10px;
+  background: var(--foreground);
+  border-radius: 50%;
+}
+
+.page-blog .article-card:first-child .grid {
+  padding-top: 0 !important;
+}
+
+p:last-child {
+  margin-bottom: 0;
 }
 
 ul,ol,dd {
@@ -2190,14 +2230,10 @@ img.zoom-img {
 }
 
 body {
-  font-family: "Work Sans",Helvetica Neue,Helvetica,Arial,sans-serif;
-  font-size: 20px;
+  tab-size: 4;
   line-height: 1.5;
-  color: var(--text-color);
-  background-color: var(--background-color);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  transition: all .25s;
+  font-family: var(--default-font-family);
+  font-size: 20px;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -2218,7 +2254,7 @@ body {
 }
 
 h1,h2,h3,h4,h5,h6 {
-  font-family: "Work Sans",Helvetica Neue,Helvetica,Arial,sans-serif;
+  font-family: "Inter",Helvetica Neue,Helvetica,Arial,sans-serif;
   font-weight: 900;
   line-height: 1.3;
   color: var(--heading-font-color);
@@ -2517,10 +2553,9 @@ table td {
 
 .logo__link {
   padding: 4px 0;
-  font-size: 15px;
+  font-size: 20px;
   line-height: 1;
-  font-weight: 900;
-  text-transform: uppercase;
+  font-weight: 700;
 }
 
 .logo__link:hover {
@@ -2654,7 +2689,6 @@ table td {
   line-height: 15px;
   font-weight: 700;
   letter-spacing: 0.1em;
-  text-transform: uppercase;
 }
 
 .nav__list .nav__item .nav__link:hover {
@@ -2951,7 +2985,6 @@ table td {
 .widget__head .widget__title {
   margin: 0;
   font-size: 20px;
-  text-transform: uppercase;
   color: var(--light-gray);
 }
 
@@ -2959,7 +2992,6 @@ table td {
   font-size: 20px;
   font-weight: 900;
   line-height: 1.3;
-  text-transform: uppercase;
   color: var(--light-gray);
 }
 
@@ -3320,24 +3352,23 @@ table td {
 
 .hero__right .hero__title {
   margin-bottom: 32px;
-  font-size: 68px;
+  font-size: 35px;
   line-height: .85em;
   font-weight: 900;
   letter-spacing: -1px;
-  text-transform: uppercase;
   color: var(--heading-font-color);
 }
 
 @media only screen and (max-width: 1140px) {
   .hero__right .hero__title {
-    font-size: 60px;
+    font-size: 35px;
   }
 }
 
 @media only screen and (max-width: 1024px) {
   .hero__right .hero__title {
     margin-bottom: 32px;
-    font-size: 48px;
+    font-size: 35px;
     letter-spacing: normal;
   }
 }
@@ -3350,7 +3381,6 @@ table td {
 }
 
 .hero__right .hero__description {
-  max-width: 530px;
   margin-bottom: 32px;
   font-size: 20px;
   color: var(--text-color);
@@ -3457,9 +3487,8 @@ table td {
 
 .article__title {
   margin-bottom: 32px;
-  font-size: 48px;
+  font-size: 25px;
   line-height: .85em;
-  text-transform: uppercase;
 }
 
 .article__title svg {
@@ -3489,6 +3518,15 @@ table td {
   .article__title {
     margin-bottom: 24px;
     font-size: 32px;
+  }
+
+  .page-blog .article__title {
+    margin-bottom: 24px;
+    font-size: 25px;
+  }
+
+  .page-blog .article-card {
+    padding-left: 0px;
   }
 
   .article__title a i {
@@ -3637,15 +3675,13 @@ table td {
 }
 
 .post__title,.page__title,.page-single .post-content h1,.page-docs main h1 {
-  margin-bottom: 40px;
-  font-size: 72px;
-  line-height: .85em;
-  text-transform: uppercase;
+  font-size: 40px;
+  line-height: 45px;
 }
 
 @media only screen and (max-width: 1140px) {
   .post__title,.page__title,.page-single .post-content h1,.page-docs main h1 {
-    font-size: 64px;
+    font-size: 50px;
   }
 }
 

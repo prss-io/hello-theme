@@ -1,7 +1,7 @@
 {
   "name": "@prss/hello-theme",
   "title": "Hello",
-  "version": "1.0.3",
+  "version": "1.0.0",
   "author": "Francisco Hodge",
   "homepage": "https://github.com/prss-io/hello-theme",
   "description": "Hello Theme for PRSS",

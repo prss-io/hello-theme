@@ -30,11 +30,11 @@ const Home = data => {
   });
 
   return (
-    <Page className="page-blog page-home">
+    <Page className="page-home">
       <Header />
-      <main className="pb-6">
+      <main className="py-12">
         <section className="flex justify-center">
-          <div className="relative mx-auto flex max-w-screen-xl flex-col gap-12 mt-6 w-full">
+          <div className="relative mx-auto flex max-w-screen-xl flex-col gap-12 w-full">
             <div class="container">
               <div class="row">
                 <div class={cx("col", "col-12", heroClass)}>

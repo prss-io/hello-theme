@@ -1,7 +1,7 @@
 <p>
   <img src="public/thumbnail.png" width="500" />
   <h2>Hello</h2>
-  <blockquote>Simple PRSS theme, suitable as a welcome portal for personal sites.</blockquote>
+  <blockquote>Minimalistic PRSS theme, suitable as a welcome portal for personal sites.</blockquote>
 </p>
 
 <div align="right">
