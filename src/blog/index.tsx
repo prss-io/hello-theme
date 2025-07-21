@@ -5,16 +5,18 @@ import cx from "classnames";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Page from "@/components/Page";
-import * as PRSS from "prss";
+import * as PRSS from "@prss/ui";
+
+import ContentRenderer from "@prss/ui/build/ContentRenderer";
 
 const Blog = data => {
   PRSS.init(data);
   (window as any).PRSS = PRSS;
 
   const { rootPath } = data;
-  const { blogPosts, currentPage, totalPages } = PRSS.getProp("vars") as any;
-  const { content } = PRSS.getProp("item");
-  const items = PRSS.getItems(["post", "post2"], true, blogPosts);
+  const { blogPosts, currentPage, totalPages, category } = PRSS.getProp("vars") as any;
+  const { content, slug } = PRSS.getProp("item");
+  const items = PRSS.getItems(["post", "post2"], true, blogPosts, category);
   const adjustedRootPath = currentPage === 1 ? rootPath : `../${rootPath}`;
 
   const posts = items.map((post) => {
@@ -55,11 +57,9 @@ const Blog = data => {
           <div className="container flex flex-col">
             <h1 className="page__title">Blog</h1>
             <div className="post-content mb-16 text-lg text-muted-foreground md:text-xl">
-              <div
+              <ContentRenderer 
+                content={content}
                 className="post-inner-content page__content"
-                dangerouslySetInnerHTML={{
-                  __html: content
-                }}
               />
             </div>
 
