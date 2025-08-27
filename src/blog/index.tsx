@@ -66,7 +66,7 @@ const Blog = data => {
             <div className="animate">
               {sortedYears.map((year) => (
                 <div key={year} className="mb-12">
-                  <h2 className="text-2xl font-bold text-foreground pb-2">
+                  <h2 className="text-2xl font-bold text-foreground pb-4">
                     {year}
                   </h2>
                   <div className="articles-grid grid sm:grid-cols-12">
